@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(ffd21e6e-4038-4161-98d1-108ba559be44.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+header {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);;
+    color: BLACK;
+    padding: 10px 0;
+    text-align: left;
+}
+
+nav {
+    background: black;
+    color: #ffffff;
+    padding: 10px 0; /* Add some padding for better spacing */
+    display: flex;
+    justify-content: space-between; /* Space between nav links and buttons */
+    align-items: center;
+}
+
+.nav-links {
+    display: flex; /* Use flexbox to align links in a row */
+    align-items: center; /* Center the links vertically */
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px; /* Add padding for better click area */
+}
+
+/* Optional: Add hover effect for links */
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+.nav-button {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin-left: 10px;
+    background: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.auth-buttons .button {
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #007BFF;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10 px; /* Space between buttons */
+}
+
+.auth-buttons .button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.logout-container {
+    margin-right: 30px;
+}
+
+.auth-button {
+    color: #ffffff;
+    padding: 10px 15px;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.auth-button:hover {
+    background-color: darkblue; /* Darker shade on hover */
+}
+
+.container {
+    padding: 20px;
+}
+
+.content {
+    display: flex; /* Use flexbox to align text and images */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.text-section {
+    background-color: #AEC3B0; /* Beige background for the left side */
+    padding: 20px;
+}
+
+.text-section h2 {
+    font-size: 44px; /* Set font size to 44px */
+    font-weight: bold; /* Make text bold */
+}
+
+.products {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: center; /* Optional: space between items */
+    gap:20px;
+}
+
+
+.product {
+    margin: 10px; /* Optional: add some margin around each product */
+    text-align: center; /* Center the text under the images */
+}
+
+.thumbnail {
+    max-width: 50%; /* Set the desired width */
+    height: 50%; /* Maintain aspect ratio */
+}
+.additional-products {
+    display: center; /* Use flexbox to align items in a row */
+    justify-content: none; /* Space between items */
+}
+
+.product {
+    margin: 5px; /* Adjust margin to reduce space between products */
+    text-align: center; /* Center the text under the images */
+}
+
+.thumbnail-small {
+    width: 250px; /* Set a smaller width for additional product images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.product h2 {
+    font-size: 20px; /* Set product title font size for additional products */
+    font-weight: bold; /* Make product title bold */
+}
+
+.divider {
+    height: 2px; /* Height of the divider */
+    background-color: black; /* Color of the divider */
+    margin: 15px 0; /* Space above and below the divider */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: grey;
+}
+/* Add styles for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.cart-icon {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.cart-image {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px;
+}

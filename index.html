@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEKUS-MEKUS THRIFT CLOTHES WEBSITE</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body class="body">
+    <header>
+        <h2>Mekus-Mekus Thrift shop</h2>
+    </header>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="nav-right">
+            <a href="cart.html" class="auth-button">My Cart</a>
+            <div class="auth-buttons">
+                <div class="logout-container">
+                    <a href="#" class="auth-button" onclick="confirmLogout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <div class="text-section">
+                <h2>Bargains, Deals, and Steals</h2>
+                <p>Hurry, and get a 10% off for your first purchase!</p>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <img src="d2439f18-79c9-4780-9778-298eaec1e3d3.jpg" alt="dress" class="thumbnail" onclick="openModal(0)">
+                <div class="product">
+                    <img src="522052ee-d40d-4b73-87d4-3f04eb270a90.jpg" alt="Product 2" class="thumbnail" onclick="openModal(1)">
+                </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <h2>Welcome to MEKUS-MEKUS Pre-Loved Clothes! We are passionate about providing unique and stylish thrift clothing at unbeatable prices. Our mission is to help you find your unique style while promoting sustainable fashion.</h2>
+            <h2>At MEKUS-MEKUS, we bring you a curated collection of high-quality thrift clothes imported straight from the USA. From vintage dresses to trendy casual wear, we have something for everyone at prices you'll love.
+             Thrift shopping not only saves you money but also helps reduce waste and supports a sustainable lifestyle.</p>
+            
+                </div>
+            </div>
+            <div class="video-container">
+                <video width="640" height="360" controls autoplay muted>
+                    <source src="Messenger_creation_7AD68024-51F2-4906-8D83-5CD04D7E2AA9.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="f94c5bce-f778-4916-aaa6-a7e6e9ad56f3.jpg" class="thumbnail-smalls" onclick="openModal(2)">
+            </div>
+            <div class="divider"></div>
+        </div>
+    </div>
+
+    <!-- Modal for image zoom -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        
+                <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+<hr><br><br>
+    <footer>
+        <p>&copy; 2024 MEKUS-MEKUS Thrift Clothes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Array of image sources
+        const images = [
+            "bk.jpg", // Image for Product 2
+            "quotes.jpg", // Image for Product 3
+            "lg.jpg" // Image for Product 4
+        ];
+
+        let currentIndex = 0;
+
+        function openModal(index) {
+            currentIndex = index; // Set the current index
+            document.getElementById("img01").src = images[currentIndex]; // Set the image source
+            document.getElementById("myModal").style.display = "block"; // Show the modal
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none"; // Hide the modal
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction; // Change the index based on direction
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1; // Loop to the last image
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0; // Loop to the first image
+            }
+            document.getElementById("img01").src = images[currentIndex]; // Update the image source
+        }
+    </script>
+    <script>
+        function confirmLogout() {
+            const confirmation = confirm("Are you sure you want to log out?");
+            if (confirmation) {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</body>
+</html>
